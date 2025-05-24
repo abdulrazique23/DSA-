@@ -1,0 +1,61 @@
+Day 11 
+Collection Frameworks : 
+LIST                      SET                     MAP
+
+-->ArrayList ------->    HashSet           ------->HashMap
+-->LinkedList  ----->    LinkedHashSet     ------->linkedHashMap
+-->Vector     ------>    TreeSet           ------->TreeMap
+
+
+List, SEt ,Map , these are interfaces
+rest of the elements are classes
+
+Interface contains incomplete methods 
+classes contains complete methods
+
+LIST : 
+List contains ordered elements and which can accepts duplicates 
+Array List is a dynamic array which can expand its size dynamically by 1.5 times 
+
+Vector is also a dynamic array which can expands its size dynamically by 2 times .
+
+LinkedList : Collection of similar types of elements in random allocation 
+----------------------------------------------------------------------------
+
+SET :
+Elements are unordered and we dont accept duplicates 
+
+last set is a class which is used to store as set is unordered , if used treeset , the elements will be ordered .
+
+----------------------------------------------------------------------------=\
+
+MAPs :
+
+Map contains Key : value pairs and TO store key value pairs we use HashMap
+
+Set unmaps are used to get the result  in big O of 1 time complexity 0(1) or constant time complexity
+-In sets and maps we dont have index value , just like arrays , we cant use simple for Loop , we have to use for each loop 
+
+---------------------------------------
+
+SYNTAX : 
+List<Integer> listname = new ArrayList<>();
+
+Set<Integer> st = new Hashset<>();
+
+Map<Integer,Integer> mp = new HashMap<>();
+-----------------------------------------------------------------------------------------------------------------------------------------
+Kadane's ALGORITHM
+
+From the give array , we have to find maximum sum of sub arrays 
+eg : {1,2,3}
+[1],[2],.....
+To find maximum sum of subarrays for optimal solution we can use Kadane's Algroithm
+
+Step 1 : Initialize two variables .
+Step 2 : One is for individual sums and second variable is for max  sum are initialized sum = 0 ; aned other with extreme negative value ;
+step 3 : Run a loop from 0 to N-1 , Get the individual values from array and add them .
+step 4 : Always update Max value 
+step 5 : Our Target is To get the Max sum , if we carry negative values , the overall sum will be reduced so if we got sum less than 0 (sum<0) 
+          restart the sum with 0 .
+step 6 : at the end of the loop and return max
